@@ -36,6 +36,6 @@
       value: "{{ item.private_ip_address }}"
       ovwerwrite: true
       ttl: 1
-    loop: "{{ result.instances }}"
+    loop: "{{ results.instances }}"
         
 
