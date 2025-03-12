@@ -16,9 +16,9 @@
       tags:
         Name: "{{ item }}"
     loop: "{{ instances }}"
-    - db
-    - backend
-    - frontend
+      - db
+      - backend
+      - frontend
     register: ec2_instance_info
 
   - name: print output
