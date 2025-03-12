@@ -13,9 +13,11 @@
       name: "{{ item }}"
       security_group: allowsam
       image_id: ami-09c813fb71547fc4f
-        tags:
-          Name: "{{ item }}"
-    loop: "{{ instances }}"
+      tags:
+        Name: "{{ item }}"
+
+    loop:
+    - "{{ instances }}"
       - db
       - backend
       - frontend
@@ -33,7 +35,8 @@
       type: A
       value: "{{ item.instances.private_ip_address }}"
       ovwerwrite: true
-      ttl: 1
+      ttl:1
+
     loop: "{{ ec2_instance_info.results }}"
         
 
