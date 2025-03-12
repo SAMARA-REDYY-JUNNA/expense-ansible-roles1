@@ -13,14 +13,14 @@
       name: "{{ item }}"
       security_group: allowsam
       image_id: ami-09c813fb71547fc4f
-      tags:
-        Name: "{{ item }}"
+        tags:
+         Name: "{{ item }}"
     loop: "{{ instances }}"
       - db
       - backend
       - frontend
     register: ec2_instance_info
-    
+
   - name: print output
     ansible.builtin.debug:
       msg: "Output: {{ ec2_instance_info }}" 
