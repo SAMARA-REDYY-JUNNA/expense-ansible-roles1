@@ -15,12 +15,7 @@
       image_id: ami-09c813fb71547fc4f
       tags:
         Name: "{{ item }}"
-
-    loop:
-    - "{{ instances }}"
-      - db
-      - backend
-      - frontend
+    loop: "{{ instances }}"
     register: ec2_instance_info
 
   - name: print output
