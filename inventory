@@ -5,7 +5,8 @@ db.mydaws.online
 backend.mydaws.online
 
 [frontend]
-mydaws.online
+frontend.mydaws.online
 
 [all:vars]
+ansible_user=ec2-user
 ansible_password=DevOps321
